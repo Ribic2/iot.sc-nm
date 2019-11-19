@@ -89,7 +89,7 @@ app.get('/', (req, res) => {
     }
     //Check if user is logged in
     else if (req.session.IfLogged) {
-        conn.query("SELECT * FROM Links", (err, results, fields) => {
+        conn.query("SELECT * FROM links", (err, results, fields) => {
             if (err) throw err;
             else {
                 res.render('admin_panel', { results: results, user: req.session.NickName });

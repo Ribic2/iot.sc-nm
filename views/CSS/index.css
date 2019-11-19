@@ -1,0 +1,169 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Open Sans', sans-serif !important;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #777;
+}
+#wrapper{
+    overflow-x: hidden;
+}
+#anchor_holder{
+    border: solid 1px red;
+}
+#content_area{
+    position: relative;
+    top: 25px;
+    min-height: 80vh;
+    height: auto;
+    padding-bottom: 20px;
+}
+#search_filter_bar{
+    height: 55px;
+    background-color: #919191;
+}
+#links_area{
+    min-height: 500px;
+    height: auto;
+}
+#error{
+    color: red !important;
+}
+.card{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F9F9F9 !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+    margin-top: 30px;
+    transition: 0.4s;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px gray;
+}
+#logo{
+    height: 75px;
+    width: 75px;
+    margin: 0px;
+    padding: 0px;
+}
+#logo_area{    
+    position: relative;
+    right: 29px;
+    font-size: 25px;
+    color: white !important;
+}
+.navbar{
+    height: 80px;
+    z-index: 100;
+}
+.navbar-nav{
+    background-color: #777;
+    position: relative;
+    bottom: 5px;
+}
+.nav-link{
+    color: white !important;
+}
+#login_icon{
+    height: 47px;
+    width: 47px;
+}
+#login{
+    font-size: 30px;
+}
+#projects{
+    height: 45px;
+    position: relative;
+    top: 10px;
+    color: white;
+}
+#projects > img{
+    height: 35px;
+    width: 35px;
+}
+.link_img{
+    height: 230px;
+}
+#log_out_button{
+    border: none;
+    width: 100%;
+    background-color: #5f5f5f;
+    color: white;
+}
+#log_out_nav_item{
+    position: relative;
+    top: 4px;
+}
+#welcome_text{
+    position: relative;
+    top: 10px;
+}
+h6{
+    color: white !important;
+}
+.delete_button{
+    color: white;
+    background-color: #cc0000;
+    border: solid 1px #cc0000;
+}
+.delete_button{
+    height: 30px;
+}
+.delete_button > img{
+    height: 15px;
+    width: 15px;
+}
+a{
+    color: black !important;
+    text-decoration: none !important; 
+}
+#add_link > input{
+    margin-top: 5px;
+    width: 100%;
+}
+#change_password_anchor{
+    color: white !important; 
+    transition: .5s;
+}
+#change_password_anchor:hover{
+    color: #007bff !important;
+}
+
+@media only screen and (max-width: 575px){
+    nav{
+        position: relative;
+        bottom: 10px;
+    }
+    .navbar-toggler{
+        position: absolute;
+        right: 0px;
+        bottom: 12px;
+    }
+    #projects{
+        text-align: center;
+    }
+    #search_filter_bar{
+        height: auto;
+    }
+    #search_input, #filter_button{
+        position: relative;
+        top: -5px;
+    }
+    #filter_button{
+        position: relative;
+        top: 10px;
+    }
+    #logo_area{
+        font-size: 20px;
+    }
+    #wrapper, body{
+        overflow-x: hidden;
+    }
+}

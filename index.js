@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
+const config = require('./config.json')
 const conn = require('./model/connection');
 const multer = require('multer');
 const session = require('express-session');
-
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Session
-app.use(session({ resave: true, secret: '123456', maxAge: 3600000, saveUninitialized: true }));
+app.use(session({ resave: true, secret: config.secret, maxAge: 3600000, saveUninitialized: true }));
 
 //Multer
 const storage = multer.diskStorage({

@@ -8,7 +8,7 @@ function log_out() {
         }
     };
 
-    xhttp.open("GET", "http://localhost?logout=true", true);
+    xhttp.open("GET", "/?logout=true", true);
     xhttp.send();
 }
 
@@ -23,6 +23,6 @@ function delete_data(e) {
             document.getElementById("body").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "http://localhost?post_to_delete=" + title_name[e].innerHTML, true);
+    xhttp.open("GET", "/?post_to_delete=" + title_name[e].innerHTML, true);
     xhttp.send();
 }

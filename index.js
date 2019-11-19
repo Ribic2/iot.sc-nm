@@ -19,7 +19,7 @@ app.use(session({ resave: true, secret: config.secret, maxAge: 3600000, saveUnin
 //Multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './views/img/link_pictures/');
+        cb(null, __dirname + '/views/img/link_pictures/');
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));

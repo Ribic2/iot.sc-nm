@@ -42,14 +42,20 @@ html
               each i in results
                   div(class="col-xl-4 col-lg-6 col-md-6")
                     div(class="card")
-                      button(class = "delete_button" onclick = "delete_data("+y+")")
-                        img(src="x-mark.png")
-                      a(href=i.link)
+                      div(class="row")
+                        div(class="col-xl-12")
+                          button(class = "delete_button" onclick = "delete_data("+y+")")
+                            img(src="x-mark.png")
+                      a()
                         img(src="./link_pictures/"+i.LinkImgName class="card-img-top" class = "link_img")
                         div(class="card-body")
-                          h5(class="title" class = "title_name")= i.linkTitle
-                          hr
-                          p(class="card-text")= i.LinkDescription
+                          form(method="GET" class="change_form")
+                            input(type="text" value = i.linkTitle name = "newTitle" class = "newTitle")
+                            input(type="text" value = i.link name = "newLink" class = "newLink")
+                            textarea(name="newDescription" class = "newDescription" data-id=i.idLink)= i.LinkDescription
+                            br
+                            input(type="button" value="spremeni" onclick = "change_data("+y+")")
+                            hr
                   -y++
               div(class="col-xl-4 col-lg-6 col-md-6")
                 div(class="card")
@@ -60,6 +66,6 @@ html
                       input(type="text" name = "description" placeholder="Opis" required)
                       input(type="text" name = "link" placeholder="Link" required)
                       input(type="file" name = "slika" required)
-                      input(type="submit" value = "Dodaj")
+                      input(type="submit" value = "Dodaj" data)
                       p(id="error") #{error}
               

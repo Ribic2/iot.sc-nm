@@ -87,6 +87,19 @@ app.get('/', (req, res) => {
             }
         });
     }
+    else if(req.query.change_post != null){
+        conn.query("UPDATE links set linkTitle = ?, link = ?, LinkDescription = ? where idLink = ? ", [req.query.newTitle, req.query.newLink, req.query.newDescription, req.query.id] ,(err)=>{
+            if(err) throw err;
+            else{
+                conn.query("SELECT * FROM links", (err2, results, fields) => {
+                    if (err2) throw err2;
+                    else {
+                        res.render('admin_panel', { results: results });
+                    }
+                });
+            }
+        });
+    }
     //Check if user is logged in
     else if (req.session.IfLogged) {
         conn.query("SELECT * FROM links", (err, results, fields) => {
@@ -177,16 +190,45 @@ app.get('/Spremeni-geslo', (req, res)=>{
 });
 
 app.post('/Spremeni-geslo', (req, res)=>{
-    if(req.body.password != req.body.passwordAgain){
-        res.render('ChangePassword', { results: "Gesli se ne ujemata !"});
+    if(req.body.password){
+        if(req.body.password != req.body.passwordAgain){
+            res.render('ChangePassword', { results: "Gesli se ne ujemata !"});
+        }
+        else{
+            conn.query("UPDATE admins SET password = ? WHERE Nickname = ? ", [req.body.password,  req.session.NickName], (err, results, fields)=>{
+                if(err) throw err;
+                else{
+                    res.redirect('/')
+                }
+            });
+        }
     }
-    else{
-        conn.query("UPDATE admins SET password = ? WHERE Nickname = ? ", [req.body.password,  req.session.NickName], (err, results, fields)=>{
-            if(err) throw err;
-            else{
-                res.redirect('/')
-            }
-        });
+    else if(req.body.username){
+        if(req.body.username != req.body.usernameAgain){
+            res.render('ChangePassword', { results: "Gesli se ne ujemata !"});
+        }
+        else{
+            conn.query("UPDATE admins SET username = ? WHERE Nickname = ? ", [req.body.username,  req.session.NickName], (err, results, fields)=>{
+                if(err) throw err;
+                else{
+                    res.redirect('/')
+                }
+            });
+        }
+    }
+    else if(req.body.nickname){
+        if(req.body.nickname != req.body.nicknameAgain){
+            res.render('ChangePassword', { results: "Gesli se ne ujemata !"});
+        }
+        else{
+            conn.query("UPDATE admins SET Nickname = ? WHERE Nickname = ? ", [req.body.nickname,  req.session.NickName], (err, results, fields)=>{
+                if(err) throw err;
+                else{
+                    req.session.NickName = req.body.nickname;
+                    res.redirect('/')
+                }
+            });
+        }
     }
 });
 

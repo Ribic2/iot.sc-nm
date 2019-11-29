@@ -8,6 +8,8 @@ body{
 header{
     height: 80px;
     width: 100%;
+    margin: 0 auto;
+    transition: 0.3s;
     background-color: #777;
 }
 #wrapper{
@@ -25,6 +27,7 @@ header{
 }
 #search_filter_bar{
     height: 55px;
+    border-radius: 4px;
     background-color: #919191;
 }
 #links_area{
@@ -48,9 +51,9 @@ header{
     box-shadow: 10px 10px 10px gray;
 }
 #logo{
-    height: 75px;
-    width: 75px;
-    margin: 0px;
+    height: 50px;
+    width: 50px;
+    margin-left: 13px;
     padding: 0px;
 }
 #logo_area{    

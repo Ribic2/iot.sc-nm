@@ -81,12 +81,9 @@ header{
 #projects{
     height: 45px;
     position: relative;
-    top: 10px;
+    text-align: center;
     color: white;
-}
-#projects > img{
-    height: 35px;
-    width: 35px;
+    top: 15px;
 }
 .link_img{
     height: 230px;

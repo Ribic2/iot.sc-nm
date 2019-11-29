@@ -72,11 +72,11 @@ header{
     color: white !important;
 }
 #login_icon{
-    height: 47px;
-    width: 47px;
+    height: 30px;
+    width: 30px;
 }
 #login{
-    font-size: 30px;
+    font-size: 25px;
 }
 #projects{
     height: 45px;

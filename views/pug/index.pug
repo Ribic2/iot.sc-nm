@@ -30,11 +30,9 @@ html
       div(class="row")
         div(class="col-xl-12" id = "search_filter_bar")
           div(class="row")
-            div(class="col-xl-8 col-lg-7 col-md-5 col-sm-6")
+            div(class="col-xl-12")
               h5(id = "projects")
                 |Vsi projekti na SCNM
-            div(class="col-xl-4 col-lg-5 col-md-7 col-sm-6" id = "scidrom_logo_holder")
-              img(src="scidrom.jpg" id = "scidrom_logo")
       div(class="row")
         div(class="col-xl-12" id = "links_area")
           div(class="row")
@@ -47,4 +45,15 @@ html
                         h3(class="title")= i.linkTitle
                         hr
                         p(class="card-text")= i.LinkDescription
-              
+    div(class = "container-fluid")
+      div(class="row")
+        footer()
+          ul
+            li
+              img(src="scnm_footer_logo.png" class = "footer_image")
+            li 
+              img(src="SCIDROM_logo.png" class = "footer_image")
+            li
+              h3 Copyright, 2019
+    
+

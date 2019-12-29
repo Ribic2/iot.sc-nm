@@ -25,12 +25,6 @@ header{
     height: auto;
     padding-bottom: 20px;
 }
-#scidrom_logo{
-    height: 50px;
-    margin: 3px;
-    width: 30%;
-    float: right;
-}
 #search_filter_bar{
     height: 55px;
     border-radius: 4px;
@@ -58,8 +52,7 @@ header{
 }
 #logo{
     height: 75px;
-    width: 100px;
-    margin-left: 13px;
+    width: 75px;
     padding: 0px;
 }
 #logo_area{    
@@ -148,6 +141,28 @@ a{
     width: 100%;
     margin-top: 4px;
 }
+footer{
+    width: 100%;
+    background-color: #777;
+    height: 350px;
+    margin-top: 50px;
+}
+footer > ul{
+    height: 90%;
+}
+footer > ul > li{
+    width: 20%;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer_image{
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 575px){
     nav{
@@ -179,22 +194,59 @@ a{
     #wrapper, body{
         overflow-x: hidden;
     }
-    #scidrom_logo{
-        width: 90%;
-        float: none;
-        margin: 0 auto;
-        margin-bottom: 5px;
+    footer > ul{
+        height: 90%;
+        margin-top: 20px;
     }
-    #scidrom_logo_holder{
-        width: 50%;
+    footer > ul > li{
+        width: 90%;
+        list-style: none;
+        margin-top: 50px;
         margin: 0 auto;
+        text-align: center;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px){
     .card{
         padding-bottom: 10px;
     }
-    #scidrom_logo{
+    footer > ul > li{
         width: 50%;
+        list-style: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
     }
+}
+@media only screen and (min-width: 768px) and (max-width: 911px){
+    footer > ul{
+        height: 90%;
+        margin-top: 20px;
+    }
+    footer > ul > li{
+        width: 45%;
+        list-style: none;
+        margin-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 912px) and (max-width: 1199px){
+    footer > ul{
+        height: 90%;
+        margin-top: 20px;
+    }
+    footer > ul > li{
+        width: 45%;
+        list-style: none;
+        margin-top: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer_image{
+        height: 130px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
 }

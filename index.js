@@ -115,7 +115,7 @@ app.get('/', (req, res) => {
         conn.query("SELECT * FROM links", (err, results, fields) => {
             if (err) throw err;
             else {
-                res.render('index', { results: results });
+                res.render('admin_panel', { results: results });
             }
 
         });

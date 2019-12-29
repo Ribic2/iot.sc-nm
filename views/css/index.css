@@ -23,6 +23,12 @@ header{
     height: auto;
     padding-bottom: 20px;
 }
+#scidrom_logo{
+    height: 50px;
+    margin: 3px;
+    width: 30%;
+    float: right;
+}
 #search_filter_bar{
     height: 55px;
     background-color: #919191;
@@ -173,9 +179,22 @@ a{
     #wrapper, body{
         overflow-x: hidden;
     }
+    #scidrom_logo{
+        width: 90%;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    #scidrom_logo_holder{
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px){
     .card{
         padding-bottom: 10px;
+    }
+    #scidrom_logo{
+        width: 50%;
     }
 }

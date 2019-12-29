@@ -25,7 +25,7 @@ html
             ul(class="navbar-nav")
               li(class="nav-item")
                 h6(id="welcome_text") Dobrodošel, #{user}! 
-                a(href = "/Spremeni-geslo" id = "change_password_anchor") Spremeni geslo
+                a(href = "/Spremeni-geslo" id = "change_password_anchor") Urejanje profila
                 button(onclick="log_out()" id = "log_out_button") Odjavi se
       div(class="container" id = "content_area")
         div(class="row")
@@ -33,8 +33,7 @@ html
             div(class="row")
               div(class="col-xl-8 col-lg-7 col-md-5 col-sm-6")
                 h5(id = "projects")
-                  img(src="project.png")
-                  |  Vsi projekti na SCNM
+                  | Vsi projekti na SCNM
               div(class="col-xl-4 col-lg-5 col-md-7 col-sm-6" id = "scidrom_logo_holder")
                 img(src="scidrom.jpg" id = "scidrom_logo")
         div(class="row")

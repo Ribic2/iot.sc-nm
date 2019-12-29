@@ -8,6 +8,8 @@ body{
 header{
     height: 80px;
     width: 100%;
+    margin: 0 auto;
+    transition: 0.3s;
     background-color: #777;
 }
 #wrapper{
@@ -31,6 +33,7 @@ header{
 }
 #search_filter_bar{
     height: 55px;
+    border-radius: 4px;
     background-color: #919191;
 }
 #links_area{
@@ -55,8 +58,8 @@ header{
 }
 #logo{
     height: 75px;
-    width: 75px;
-    margin: 0px;
+    width: 100px;
+    margin-left: 13px;
     padding: 0px;
 }
 #logo_area{    
@@ -78,21 +81,18 @@ header{
     color: white !important;
 }
 #login_icon{
-    height: 47px;
-    width: 47px;
+    height: 30px;
+    width: 30px;
 }
 #login{
-    font-size: 30px;
+    font-size: 25px;
 }
 #projects{
     height: 45px;
     position: relative;
-    top: 10px;
+    text-align: center;
     color: white;
-}
-#projects > img{
-    height: 35px;
-    width: 35px;
+    top: 15px;
 }
 .link_img{
     height: 230px;

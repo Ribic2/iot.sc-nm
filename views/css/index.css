@@ -158,11 +158,19 @@ footer > ul > li{
     margin-top: 20px;
 }
 .footer_image{
-    height: 100px;
+    height: 60px;
     margin: 0 auto;
-    width: 100%;
+    min-width: 190px;
+    width: 50%;
+    position: relative;
+    top: 20px;
 }
-
+#copyrightText{
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    top: 20px;
+}
 
 @media only screen and (max-width: 575px){
     nav{

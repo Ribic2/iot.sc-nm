@@ -144,7 +144,7 @@ a{
 footer{
     width: 100%;
     background-color: #777;
-    height: 350px;
+    height: 230px;
     margin-top: 50px;
 }
 footer > ul{
@@ -155,7 +155,6 @@ footer > ul > li{
     list-style: none;
     margin: 0 auto;
     text-align: center;
-    margin-top: 20px;
 }
 .footer_image{
     height: 60px;
@@ -169,7 +168,7 @@ footer > ul > li{
     text-align: center;
     font-size: 15px;
     position: relative;
-    top: 20px;
+    top: 40px;
 }
 
 @media only screen and (max-width: 575px){
